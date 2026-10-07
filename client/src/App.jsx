@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserLayout from "./pages/UserLayout";
-
+import Login from './components/Login'
+import Logout from './components/Logout'
 function App() {
   return (
     <BrowserRouter>
       <Routes>
 
+       <Route path="/" element={<Login />} />
         {/* Home */}
-        <Route path="/" element={<UserLayout />} />
+        <Route path="/user" element={<UserLayout />} />
 
         {/* Other pages */}
-        <Route path="/mycart" element={<h1>My Cart</h1>} />
+        <Route path="mycart" element={<h1>My Cart</h1>} />
 
         <Route path="/myorders" element={<h1>My Orders</h1>} />
 
@@ -18,7 +20,7 @@ function App() {
 
         <Route path="/settings" element={<h1>Settings</h1>} />
 
-        <Route path="/logout" element={<h1>Logout</h1>} />
+        <Route path="/logout" element={<Logout />} />
 
         {/* 404 */}
         <Route

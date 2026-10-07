@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Item = ({ image, title, price }) => {
   return (

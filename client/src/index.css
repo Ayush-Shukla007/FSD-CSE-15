@@ -88,7 +88,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* BUTTON */
+
 
 .item button {
   width: 150px;
@@ -108,7 +108,7 @@ body {
   background-color: #00bcd4;
 }
 
-/* FOOTER */
+
 
 .footer {
   width: 100%;
@@ -120,4 +120,84 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* LOGIN PAGE */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 140px);
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-container h2 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.login-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #00bcd4;
+}
+
+.login-form button {
+  padding: 12px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #00bcd4;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+  color: #444;
+  gap: 5px;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.login-buttons button {
+  flex: 1;
+  margin-top: 5px;
 }

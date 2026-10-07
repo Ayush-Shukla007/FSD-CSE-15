@@ -27,15 +27,17 @@ function App() {
     setTime(0);
   };
 
-  const seconds = Math.floor(time / 1000);
+  const minutes = Math.floor(time / 60000);
+  const seconds = Math.floor((time % 60000) / 1000);
   const milliseconds = time % 1000;
 
   return (
     <div>
       <h1>Stopwatch</h1>
-      <p>Time: {seconds} sec and {milliseconds} millisec</p>
-      <button onClick={startTimer}>Start</button>
-      <button onClick={stopTimer}>Stop</button>
+      <p>Time: {minutes} min : {seconds} sec : {milliseconds} mili</p>
+      <button onClick={isRunning ? stopTimer : startTimer}>
+        {isRunning ? "Stop" : "Start"}
+      </button>
       <button onClick={resetTimer}>Reset</button>
     </div>
   );
